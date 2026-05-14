@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <title>About Us | Shree Chemihub Traders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#C12127',
+                        brandRedDark: '#8A1538',
+                        brandBlue: '#0071A4',
+                        navy: '#003d5c', /* Deep version of logo blue */
+                        slate: {
+                            50: '#f4f9fc',
+                            100: '#e2f0f7',
+                            200: '#cbe2ef',
+                            300: '#a7ccdf',
+                            400: '#7bb0c9',
+                            500: '#5c96b2',
+                            600: '#467b96', /* Muted blue for paragraph text */
+                            700: '#3a6279',
+                            800: '#2d4b5e', /* Dark blue for headings */
+                            900: '#263f50',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+    </style>
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-36">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                        <img src="assets/logo.png" alt="Shree Chemihub Traders Logo" class="h-32 w-auto">
+                        <span class="font-bold text-lg sm:text-2xl text-navy tracking-tight">Shree Chemihub <span class="text-brandBlue">Traders</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-600 font-medium transition hover:text-brandRed">Home</a>
+                    <a href="products.html" class="text-slate-600 font-medium transition hover:text-brandBlue">Products</a>
+                    <a href="about.html" class="text-brandBlue font-semibold transition hover:text-brandBlue">About Us</a>
+                    <a href="contact.html" class="bg-brandBlue text-white px-5 py-2.5 rounded-md font-medium hover:bg-opacity-90 transition shadow-sm">Contact Us</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brandBlue focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
+                <a href="index.html" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50">Home</a>
+                <a href="products.html" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50">Products</a>
+                <a href="about.html" class="block px-3 py-2 text-brandBlue font-semibold bg-blue-50 rounded-md">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-brandBlue font-medium hover:bg-slate-50">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-44 pb-16 bg-navy text-white text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">About Us</h1>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto">Bridging the gap between global medical manufacturers and local healthcare providers through trust and precision.</p>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-100">
+                <div class="mb-12">
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        Based in Birtamode, Jhapa, <strong>Shree Chemihub Traders</strong> serves as a key intermediary between international medical manufacturers and local healthcare providers all over Nepal. We specialize in authorized distribution, technical bidding, and comprehensive institutional supply for hospitals, clinics, and pathology labs.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <!-- Mission -->
+                    <div class="bg-blue-50/50 p-8 rounded-2xl border border-blue-100">
+                        <div class="w-12 h-12 bg-brandBlue text-white rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="target" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy mb-4">Our Mission</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            To provide a complete and seamless diagnostic solution by distributing high-tech, reliable laboratory machinery and surgical supplies to healthcare facilities across the nation.
+                        </p>
+                    </div>
+
+                    <!-- Vision -->
+                    <div class="bg-red-50/50 p-8 rounded-2xl border border-red-100">
+                        <div class="w-12 h-12 bg-brandRed text-white rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="eye" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy mb-4">Our Vision</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            To be the most trusted and advanced medical equipment partner in Nepal, empowering healthcare professionals with cutting-edge technology to elevate patient care and diagnostic accuracy.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-navy mb-6 mt-12">Why Choose Us?</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-4">
+                        <div class="mt-1 bg-blue-50 p-2 rounded-full text-brandBlue"><i data-lucide="check-circle" class="w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-lg">Uncompromising Quality</h4>
+                            <p class="text-slate-600 text-sm">We strictly verify all necessary compliances and ISO certifications before trading any medical or diagnostic product.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="mt-1 bg-red-50 p-2 rounded-full text-brandRed"><i data-lucide="truck" class="w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-lg">Reliable Bulk Supplying</h4>
+                            <p class="text-slate-600 text-sm">From routine lab consumables to comprehensive laboratory automation systems, our logistics are built to scale.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="mt-1 bg-slate-100 p-2 rounded-full text-slate-700"><i data-lucide="users" class="w-5 h-5"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-lg">Technical Expertise</h4>
+                            <p class="text-slate-600 text-sm">Our support team includes medical veterans to assist you with specific diagnostic requirements and optimal equipment usage.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <h2 class="text-3xl font-bold text-navy mb-6 mt-12">Our Location</h2>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-slate-100 w-full aspect-video md:aspect-[21/9]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.0977266289983!2d87.99631857503991!3d26.645353276807498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e5bb6f3f6ddd25%3A0x8e5f1b3de32a6d94!2sShree%20Chemihub%20Traders!5e0!3m2!1sen!2snp!4v1778430045254!5m2!1sen!2snp" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-slate-300 py-12 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">&copy; 2026 Shree Chemihub Traders. All rights reserved.</p>
+            <p class="text-xs text-slate-400 mt-2">Powered by - GuesS'</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="animations.js"></script>
+</body>
+</html>

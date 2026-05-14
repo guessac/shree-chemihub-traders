@@ -1,0 +1,120 @@
+/* Professional Wizardry CSS */
+
+/* Smooth underline animation for nav links */
+.nav-link-magic {
+    position: relative;
+    display: inline-block;
+}
+.nav-link-magic::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: theme('colors.brandBlue');
+    transition: width 0.3s ease;
+}
+.nav-link-magic:hover::after {
+    width: 100%;
+}
+
+/* Hover effects for buttons */
+.btn-magic {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.btn-magic::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.15);
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+.btn-magic:hover::after {
+    transform: translateY(0);
+}
+.btn-magic:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 113, 164, 0.3), 0 4px 6px -2px rgba(0, 113, 164, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Card hover magic */
+.hover-magic {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.hover-magic:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 113, 164, 0.15), 0 10px 10px -5px rgba(0, 113, 164, 0.04);
+    border-color: rgba(0, 113, 164, 0.3);
+}
+
+/* Floating animation for icons/logos */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Subtly animated gradient text */
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    background-image: linear-gradient(135deg, #0071A4 0%, #8A1538 50%, #0071A4 100%);
+    animation: gradientShift 5s linear infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+/* Accordion Expand/Collapse Logic */
+.category-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), opacity 0.5s ease-in-out, margin-top 0.3s ease;
+    margin-top: 0;
+}
+.category-content.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    transition: max-height 0.8s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.3s ease;
+    margin-top: 1rem;
+}
+
+/* Modal Overlay Animation */
+.modal-overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Content Animation */
+.modal-content {
+    transform: scale(0.95) translateY(10px);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+}
+.modal-overlay.active .modal-content {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <title>Products & Partners | Shree Chemihub Traders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#C12127',
+                        brandRedDark: '#8A1538',
+                        brandBlue: '#0071A4',
+                        navy: '#003d5c', /* Deep version of logo blue */
+                        slate: {
+                            50: '#f4f9fc',
+                            100: '#e2f0f7',
+                            200: '#cbe2ef',
+                            300: '#a7ccdf',
+                            400: '#7bb0c9',
+                            500: '#5c96b2',
+                            600: '#467b96', /* Muted blue for paragraph text */
+                            700: '#3a6279',
+                            800: '#2d4b5e', /* Dark blue for headings */
+                            900: '#263f50',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+    </style>
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-36">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                        <img src="assets/logo.png" alt="Shree Chemihub Traders Logo" class="h-32 w-auto">
+                        <span class="font-bold text-lg sm:text-2xl text-navy tracking-tight">Shree Chemihub <span class="text-brandBlue">Traders</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-600 font-medium transition hover:text-brandRed">Home</a>
+                    <a href="products.html" class="text-brandBlue font-semibold transition hover:text-brandBlue">Products</a>
+                    <a href="about.html" class="text-slate-600 font-medium transition hover:text-brandBlue">About Us</a>
+                    <a href="contact.html" class="bg-brandBlue text-white px-5 py-2.5 rounded-md font-medium hover:bg-opacity-90 transition shadow-sm">Contact Us</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brandBlue focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
+                <a href="index.html" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50">Home</a>
+                <a href="products.html" class="block px-3 py-2 text-brandBlue font-semibold bg-blue-50 rounded-md">Products</a>
+                <a href="about.html" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-brandBlue font-medium hover:bg-slate-50">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-44 pb-16 bg-navy text-white text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Official Partnerships & Products</h1>
+            <p class="text-lg text-slate-300 max-w-3xl mx-auto">We are extremely proud to be the official distributor for some of the world's most innovative diagnostic and medical equipment manufacturers.</p>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Product Categories -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-navy mb-8 text-center" data-aos="fade-up">Our Product Portfolio</h2>
+                <p class="text-slate-600 text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">Shree Chemihub Traders specializes in In Vitro Diagnostics (IVD) and laboratory automation, categorized into three technical sections.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Category 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover-magic" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-12 h-12 bg-blue-50 text-brandBlue rounded-full flex items-center justify-center mb-6"><i data-lucide="microscope"></i></div>
+                        <h3 class="text-xl font-bold text-navy mb-4">Laboratory Instrumentation</h3>
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brandRed flex-shrink-0 mt-0.5"></i> Hematology Analyzers (3-part & 5-part)</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brandRed flex-shrink-0 mt-0.5"></i> CLIA Systems (Specialized hormone & tumor markers)</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brandRed flex-shrink-0 mt-0.5"></i> PA 50 Analyzers & centrifuges</li>
+                        </ul>
+                    </div>
+                    <!-- Category 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover-magic" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-12 h-12 bg-red-50 text-brandRed rounded-full flex items-center justify-center mb-6"><i data-lucide="flask-conical"></i></div>
+                        <h3 class="text-xl font-bold text-navy mb-4">Diagnostic Reagents & Consumables</h3>
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brandBlue flex-shrink-0 mt-0.5"></i> Reagent Kits for Snibe, HUMAN & CTK</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brandBlue flex-shrink-0 mt-0.5"></i> Laboratory Consumables</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brandBlue flex-shrink-0 mt-0.5"></i> Test tubes & filters</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brandBlue flex-shrink-0 mt-0.5"></i> Specialized plasticware</li>
+                        </ul>
+                    </div>
+                    <!-- Category 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover-magic" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-12 h-12 bg-slate-100 text-slate-700 rounded-full flex items-center justify-center mb-6"><i data-lucide="stethoscope"></i></div>
+                        <h3 class="text-xl font-bold text-navy mb-4">Basic Hospital & Surgical Equipment</h3>
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brandRed flex-shrink-0 mt-0.5"></i> General Lab Gear (Blood roller mixers, incubators, autoclaves)</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brandRed flex-shrink-0 mt-0.5"></i> General Surgical Instruments</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brandRed flex-shrink-0 mt-0.5"></i> Hospital Furniture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-navy mb-8 text-center" data-aos="fade-up">Key Technical Brands</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Snibe -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md hover:border-brandBlue transition group flex flex-col h-full cursor-pointer" onclick="window.location.href='brand-snibe.html'">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-16 w-32 bg-white rounded-lg flex items-center justify-center p-2 border border-slate-100 group-hover:border-brandBlue transition">
+                            <img src="assets/Logo Snibe.png" alt="Snibe Logo" class="max-w-full max-h-full object-contain" onerror="this.outerHTML='<span class=\'font-bold text-xl text-brandBlue\'>Snibe</span>'">
+                        </div>
+                        <h2 class="text-2xl font-bold text-navy hidden sm:block">Snibe</h2>
+                    </div>
+                    <div class="text-slate-600 mb-6 flex-grow">
+                        <p class="mb-4">
+                            A global leader in Chemiluminescence immunoassay (CLIA) systems. We supply Snibe's highly advanced lab automation systems and an extensive clinical chemistry test menu offering up to 260 parameters.
+                        </p>
+                    </div>
+                    <div class="mt-auto flex flex-col items-start">
+                        <div class="mb-4">
+                            <span class="inline-block bg-blue-50 text-brandBlue text-xs font-semibold px-3 py-1 rounded-full mb-2">CLIA Systems</span>
+                            <span class="inline-block bg-blue-50 text-brandBlue text-xs font-semibold px-3 py-1 rounded-full mb-2">Lab Automation</span>
+                        </div>
+                        <a href="brand-snibe.html" class="text-brandBlue font-bold text-sm hover:underline flex items-center transition-all">Explore Brand <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- HUMAN -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md hover:border-brandRed transition group flex flex-col h-full cursor-pointer" onclick="window.location.href='brand-human.html'">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-16 w-32 bg-white rounded-lg flex items-center justify-center p-2 border border-slate-100 group-hover:border-brandRed transition">
+                            <img src="assets/logo human.svg" alt="HUMAN Logo" class="max-w-full max-h-full object-contain" onerror="this.outerHTML='<span class=\'font-bold text-xl text-brandRed\'>HUMAN</span>'">
+                        </div>
+                        <h2 class="text-2xl font-bold text-navy hidden sm:block">HUMAN</h2>
+                    </div>
+                    <div class="text-slate-600 mb-6 flex-grow">
+                        <p class="mb-4">
+                            Renowned German engineering in the field of In-Vitro Diagnostics (IVD). Our HUMAN product line encompasses cutting-edge clinical chemistry analyzers, hematology systems, and reliable ELISA workflows.
+                        </p>
+                    </div>
+                    <div class="mt-auto flex flex-col items-start">
+                        <div class="mb-4">
+                            <span class="inline-block bg-red-50 text-brandRed text-xs font-semibold px-3 py-1 rounded-full mb-2">IVD</span>
+                            <span class="inline-block bg-red-50 text-brandRed text-xs font-semibold px-3 py-1 rounded-full mb-2">Hematology</span>
+                        </div>
+                        <a href="brand-human.html" class="text-brandRed font-bold text-sm hover:underline flex items-center transition-all">Explore Brand <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- SLEE medical -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md hover:border-brandBlue transition group flex flex-col h-full cursor-pointer" onclick="window.location.href='brand-slee.html'">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-16 w-32 bg-white rounded-lg flex items-center justify-center p-2 border border-slate-100 group-hover:border-brandBlue transition">
+                            <img src="assets/slee-logo.svg" alt="SLEE medical Logo" class="max-w-full max-h-full object-contain" onerror="this.outerHTML='<span class=\'font-bold text-xl text-brandBlue\'>SLEE</span>'">
+                        </div>
+                        <h2 class="text-2xl font-bold text-navy hidden sm:block">SLEE medical</h2>
+                    </div>
+                    <div class="text-slate-600 mb-6 flex-grow">
+                        <p class="mb-4">
+                            Pioneers in precision technology for histopathology since 1954. We distribute SLEE's high-precision microtomes, advanced tissue processors, and complete embedding centers for pathology labs.
+                        </p>
+                    </div>
+                    <div class="mt-auto flex flex-col items-start">
+                        <div class="mb-4">
+                            <span class="inline-block bg-blue-50 text-brandBlue text-xs font-semibold px-3 py-1 rounded-full mb-2">Histopathology</span>
+                            <span class="inline-block bg-blue-50 text-brandBlue text-xs font-semibold px-3 py-1 rounded-full mb-2">Microtomes</span>
+                        </div>
+                        <a href="brand-slee.html" class="text-brandBlue font-bold text-sm hover:underline flex items-center transition-all">Explore Brand <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- CTK Biotech -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md hover:border-brandRed transition group flex flex-col h-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-16 w-32 bg-white rounded-lg flex items-center justify-center p-2 border border-slate-100 group-hover:border-brandRed transition">
+                            <img src="assets/logo ctk.jpeg" alt="CTK Biotech Logo" class="max-w-full max-h-full object-contain" onerror="this.outerHTML='<span class=\'font-bold text-xl text-brandRed\'>CTK Biotech</span>'">
+                        </div>
+                        <h2 class="text-2xl font-bold text-navy hidden sm:block">CTK Biotech</h2>
+                    </div>
+                    <div class="text-slate-600 mb-6 flex-grow">
+                        <p class="mb-4">
+                            Developers and manufacturers of innovative immunodiagnostic tools. We provide CTK's rapid diagnostic tests (RDTs), reliable ELISA kits, and point-of-care infectious disease diagnostics.
+                        </p>
+                        <div id="ctk-category" class="category-content">
+                            <h4 class="font-bold text-navy mb-2 mt-4">Product Categories:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-sm pl-2 text-slate-600 mb-4">
+                                <li>Rapid Diagnostic Tests (RDTs)</li>
+                                <li>ELISA Kits</li>
+                                <li>Point-of-Care Diagnostics</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-auto flex flex-col items-start">
+                        <div class="mb-4">
+                            <span class="inline-block bg-red-50 text-brandRed text-xs font-semibold px-3 py-1 rounded-full mb-2">Rapid Diagnostic Tests</span>
+                            <span class="inline-block bg-red-50 text-brandRed text-xs font-semibold px-3 py-1 rounded-full mb-2">Point-of-Care</span>
+                        </div>
+                        <button onclick="toggleCategory('ctk-category', this)" class="text-brandRed font-bold text-sm hover:underline flex items-center transition-all">View Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></button>
+                    </div>
+                </div>
+
+                <!-- Tulip Diagnostics -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md hover:border-brandBlue transition group flex flex-col h-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-16 w-32 bg-white rounded-lg flex items-center justify-center p-2 border border-slate-100 group-hover:border-brandBlue transition">
+                            <img src="assets/tulip-logo.png" alt="Tulip Diagnostics Logo" class="max-w-full max-h-full object-contain" onerror="this.outerHTML='<span class=\'font-bold text-xl text-brandBlue\'>Tulip Diagnostics</span>'">
+                        </div>
+                        <h2 class="text-2xl font-bold text-navy hidden sm:block">Tulip Diagnostics</h2>
+                    </div>
+                    <div class="text-slate-600 mb-6 flex-grow">
+                        <p class="mb-4">
+                            A leading provider of holistic diagnostic solutions. We proudly supply Tulip's extensive range of blood banking reagents, microbiology tools, rapid test kits, and clinical disinfectants.
+                        </p>
+                        <div id="tulip-category" class="category-content">
+                            <h4 class="font-bold text-navy mb-2 mt-4">Product Categories:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-sm pl-2 text-slate-600 mb-4">
+                                <li>Blood Banking Reagents</li>
+                                <li>Microbiology Tools</li>
+                                <li>Rapid Test Kits</li>
+                                <li>Clinical Disinfectants</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-auto flex flex-col items-start">
+                        <div class="mb-4">
+                            <span class="inline-block bg-blue-50 text-brandBlue text-xs font-semibold px-3 py-1 rounded-full mb-2">Blood Banking</span>
+                            <span class="inline-block bg-blue-50 text-brandBlue text-xs font-semibold px-3 py-1 rounded-full mb-2">Microbiology</span>
+                        </div>
+                        <button onclick="toggleCategory('tulip-category', this)" class="text-brandBlue font-bold text-sm hover:underline flex items-center transition-all">View Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></button>
+                    </div>
+                </div>
+
+                <!-- Contact CTA Card -->
+                <div class="bg-navy p-8 rounded-2xl shadow-sm border border-brandBlue/30 hover:border-brandRed transition flex flex-col justify-center items-center text-center h-full">
+                    <h3 class="text-2xl font-bold text-white mb-4">Looking for something specific?</h3>
+                    <p class="text-slate-300 mb-8">
+                        Our catalog spans thousands of products across our official partners. Let our experts assist you.
+                    </p>
+                    <a href="contact.html" class="bg-brandRed text-white font-bold px-8 py-3 rounded-md hover:bg-brandRed/90 transition shadow-sm w-full sm:w-auto">
+                        Request Full Catalog
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-slate-300 py-12 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">&copy; 2026 Shree Chemihub Traders. All rights reserved.</p>
+            <p class="text-xs text-slate-400 mt-2">Powered by - GuesS'</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="animations.js"></script>
+
+</body>
+</html>

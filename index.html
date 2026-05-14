@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <title>Shree Chemihub Traders | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#C12127',
+                        brandRedDark: '#8A1538',
+                        brandBlue: '#0071A4',
+                        navy: '#003d5c', /* Deep version of logo blue */
+                        slate: {
+                            50: '#f4f9fc',
+                            100: '#e2f0f7',
+                            200: '#cbe2ef',
+                            300: '#a7ccdf',
+                            400: '#7bb0c9',
+                            500: '#5c96b2',
+                            600: '#467b96', /* Muted blue for paragraph text */
+                            700: '#3a6279',
+                            800: '#2d4b5e', /* Dark blue for headings */
+                            900: '#263f50',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-36">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                        <img src="assets/logo.png" alt="Shree Chemihub Traders Logo" class="h-32 w-auto drop-shadow-sm">
+                        <span class="font-bold text-lg sm:text-2xl text-navy tracking-tight">Shree Chemihub <span
+                                class="text-brandBlue">Traders</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-brandRed font-semibold transition hover:text-brandRed">Home</a>
+                    <a href="products.html"
+                        class="text-slate-600 font-medium transition hover:text-brandBlue">Products</a>
+                    <a href="about.html" class="text-slate-600 font-medium transition hover:text-brandBlue">About Us</a>
+                    <a href="contact.html"
+                        class="bg-brandBlue text-white px-5 py-2.5 rounded-md font-medium hover:bg-opacity-90 transition shadow-sm">Contact
+                        Us</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brandBlue focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
+                <a href="index.html" class="block px-3 py-2 text-brandRed font-semibold">Home</a>
+                <a href="products.html"
+                    class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50">Products</a>
+                <a href="about.html" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-brandBlue font-medium hover:bg-slate-50">Contact
+                    Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="flex-grow pt-36">
+        <div class="relative bg-navy">
+            <div class="absolute inset-0">
+                <img class="w-full h-full object-cover opacity-40 mix-blend-overlay" src="assets/hero_bg.png"
+                    alt="Medical Diagnostic Warehouse">
+                <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent"></div>
+            </div>
+            <div
+                class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 flex flex-col justify-center min-h-[600px]">
+                <div class="mb-6">
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brandBlue/30 bg-navy/40 text-brandBlue text-sm font-semibold tracking-wide backdrop-blur-md">
+                        <i data-lucide="crosshair" class="w-4 h-4"></i> Accurate, Precise and Reliable
+                    </span>
+                </div>
+                <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl max-w-3xl">
+                    Your Trusted Partner in <span class="text-brandBlue">Quality Diagnostic Solutions.</span>
+                </h1>
+                <p class="mt-6 text-xl text-slate-300 max-w-2xl leading-relaxed">
+                    Premium laboratory instruments, diagnostic reagents, and specialized medical supplies delivered with
+                    uncompromised quality, reliable logistics, and expert technical support.
+                </p>
+                <div class="mt-10 flex gap-4">
+                    <a href="products.html"
+                        class="bg-brandRed border border-transparent rounded-md shadow px-8 py-3 text-base font-medium text-white hover:bg-opacity-90 transition">
+                        View Products
+                    </a>
+                    <a href="contact.html"
+                        class="bg-transparent border border-white rounded-md shadow px-8 py-3 text-base font-medium text-white hover:bg-white hover:text-navy transition">
+                        Request Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trusted Brand Partners -->
+        <div class="bg-navy/90 border-t border-white/10 py-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-sm text-slate-400 uppercase tracking-widest font-medium mb-8">Official
+                    Distribution Partners</p>
+                <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+                    <a href="brand-snibe.html" class="group">
+                        <img src="assets/Logo Snibe.png" alt="Snibe"
+                            class="h-12 md:h-16 w-auto object-contain opacity-70 group-hover:opacity-100 transition duration-300 brightness-0 invert">
+                    </a>
+                    <a href="brand-human.html" class="group">
+                        <img src="assets/logo human.svg" alt="HUMAN"
+                            class="h-12 md:h-16 w-auto object-contain opacity-70 group-hover:opacity-100 transition duration-300 brightness-0 invert">
+                    </a>
+                    <a href="brand-slee.html" class="group">
+                        <img src="assets/slee-logo.svg" alt="SLEE"
+                            class="h-12 md:h-16 w-auto object-contain opacity-70 group-hover:opacity-100 transition duration-300 brightness-0 invert">
+                    </a>
+                    <a href="products.html" class="group">
+                        <img src="assets/logo ctk.jpeg" alt="CTK Biotech"
+                            class="h-12 md:h-16 w-auto object-contain opacity-70 group-hover:opacity-100 transition duration-300 rounded">
+                    </a>
+                    <a href="products.html" class="group">
+                        <img src="assets/tulip-logo.png" alt="Tulip Diagnostics"
+                            class="h-12 md:h-16 w-auto object-contain opacity-70 group-hover:opacity-100 transition duration-300 brightness-0 invert">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features / Trust Signals -->
+        <div class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6 border border-slate-100 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 mx-auto bg-blue-50 text-brandBlue rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy mb-2">Quality Certifications</h3>
+                        <p class="text-slate-600">ISO Certified processes with complete MSDS compliance for ultimate
+                            safety.</p>
+                    </div>
+                    <div class="p-6 border border-slate-100 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 mx-auto bg-red-50 text-brandRed rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="truck"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy mb-2">Global Logistics</h3>
+                        <p class="text-slate-600">Reliable and rapid delivery supply chains tailored for healthcare
+                            facilities.</p>
+                    </div>
+                    <div class="p-6 border border-slate-100 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 mx-auto bg-slate-100 text-slate-700 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="flask-conical"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy mb-2">Technical Support</h3>
+                        <p class="text-slate-600">Expert guidance from medical specialists for your diagnostic
+                            needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="assets/logo.png" alt="Shree Chemihub Traders Logo"
+                        class="h-12 w-auto bg-white p-1 rounded-sm">
+                    <span class="font-bold text-2xl text-white tracking-tight">Shree Chemihub Traders</span>
+                </div>
+                <p class="max-w-xs text-sm leading-relaxed">A complete diagnostic solution and medical equipment partner
+                    for healthcare providers, laboratories, and hospitals.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                    <li><a href="products.html" class="hover:text-white transition">Products</a></li>
+                    <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Contact Info</h4>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex items-start gap-2"><i data-lucide="map-pin"
+                            class="w-4 h-4 mt-0.5 text-brandRed"></i> Birtamode-5, Jhapa, Nepal</li>
+                    <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-brandRed"></i>
+                        023-590041</li>
+                    <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-brandRed"></i>
+                        chemihubtraders@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-sm text-center">
+            &copy; 2026 Shree Chemihub Traders. All rights reserved.
+            <p class="text-xs text-slate-400 mt-2">Powered by - GuesS'</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="animations.js"></script>
+</body>
+
+</html>

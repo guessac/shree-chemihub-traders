@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <title>Snibe Equipment | Shree Chemihub Traders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#C12127',
+                        brandRedDark: '#8A1538',
+                        brandBlue: '#0071A4',
+                        navy: '#003d5c',
+                        slate: {
+                            50: '#f4f9fc',
+                            100: '#e2f0f7',
+                            200: '#cbe2ef',
+                            300: '#a7ccdf',
+                            400: '#7bb0c9',
+                            500: '#5c96b2',
+                            600: '#467b96',
+                            700: '#3a6279',
+                            800: '#2d4b5e',
+                            900: '#263f50',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+    </style>
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-36">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                        <img src="assets/logo.png" alt="Shree Chemihub Traders Logo" class="h-32 w-auto">
+                        <span class="font-bold text-lg sm:text-2xl text-navy tracking-tight">Shree Chemihub <span class="text-brandBlue">Traders</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-600 font-medium transition hover:text-brandRed">Home</a>
+                    <a href="products.html" class="text-brandBlue font-semibold transition hover:text-brandBlue">Products</a>
+                    <a href="about.html" class="text-slate-600 font-medium transition hover:text-brandBlue">About Us</a>
+                    <a href="contact.html" class="bg-brandBlue text-white px-5 py-2.5 rounded-md font-medium hover:bg-opacity-90 transition shadow-sm">Contact Us</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brandBlue focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brandRed font-medium">Home</a>
+                <a href="products.html" class="block px-3 py-2 text-brandBlue bg-blue-50 font-semibold rounded-md">Products</a>
+                <a href="about.html" class="block px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-brandBlue font-medium">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-brandBlue font-medium hover:bg-blue-50">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-44 pb-12 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start gap-8">
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex-shrink-0">
+                <img src="assets/Logo Snibe.png" alt="Snibe Logo" class="h-20 w-auto object-contain max-w-[200px]">
+            </div>
+            <div class="flex flex-col justify-center pt-2">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-navy mb-2 tracking-tight">Snibe Diagnostic Equipment</h1>
+                <h2 class="text-xl text-brandBlue font-medium mb-6 ml-6 md:ml-24">A global leader in diagnostic innovation.</h2>
+                <p class="text-slate-600 max-w-3xl leading-relaxed">
+                    Explore our range of Fully Automated Chemiluminescence Immunoassay (CLIA) systems and extensive clinical chemistry solutions designed for exceptional throughput and reliability.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex items-center gap-2 mb-8 text-sm text-slate-500">
+                <a href="products.html" class="hover:text-brandBlue transition flex items-center"><i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i> Back to Brands</a>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Product 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition flex flex-col overflow-hidden group">
+                    <div class="bg-slate-50 p-6 flex items-center justify-center h-64 border-b border-slate-100 relative">
+                        <img src="assets/Maglumi-800.jpeg" alt="Maglumi 800" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-4 left-4 bg-brandBlue text-white text-xs font-bold px-2 py-1 rounded">CLIA System</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow text-center">
+                        <h3 class="text-xl font-bold text-navy mb-2">Maglumi 800</h3>
+                        <p class="text-slate-500 text-sm flex-grow mb-6">Compact and powerful automated CLIA analyzer suitable for medium-sized laboratories.</p>
+                        <a href="contact.html" class="block w-full bg-slate-100 hover:bg-brandBlue hover:text-white text-navy font-semibold py-2 rounded transition">Request Quote</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition flex flex-col overflow-hidden group">
+                    <div class="bg-slate-50 p-6 flex items-center justify-center h-64 border-b border-slate-100 relative">
+                        <img src="assets/Maglumi-2000.jpeg" alt="Maglumi 2000" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-4 left-4 bg-brandBlue text-white text-xs font-bold px-2 py-1 rounded">CLIA System</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow text-center">
+                        <h3 class="text-xl font-bold text-navy mb-2">Maglumi 2000</h3>
+                        <p class="text-slate-500 text-sm flex-grow mb-6">High-performance analyzer delivering fast turnaround times with an extensive assay menu.</p>
+                        <a href="contact.html" class="block w-full bg-slate-100 hover:bg-brandBlue hover:text-white text-navy font-semibold py-2 rounded transition">Request Quote</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition flex flex-col overflow-hidden group">
+                    <div class="bg-slate-50 p-6 flex items-center justify-center h-64 border-b border-slate-100 relative">
+                        <img src="assets/Maglumi-X6.jpeg" alt="Maglumi X6" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-4 left-4 bg-brandBlue text-white text-xs font-bold px-2 py-1 rounded">CLIA System</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow text-center">
+                        <h3 class="text-xl font-bold text-navy mb-2">Maglumi X6</h3>
+                        <p class="text-slate-500 text-sm flex-grow mb-6">Advanced analytical capabilities with enhanced throughput and continuous loading.</p>
+                        <a href="contact.html" class="block w-full bg-slate-100 hover:bg-brandBlue hover:text-white text-navy font-semibold py-2 rounded transition">Request Quote</a>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition flex flex-col overflow-hidden group">
+                    <div class="bg-slate-50 p-6 flex items-center justify-center h-64 border-b border-slate-100 relative">
+                        <img src="assets/Maglumi-X8.jpeg" alt="Maglumi X8" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-4 left-4 bg-brandBlue text-white text-xs font-bold px-2 py-1 rounded">CLIA System</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow text-center">
+                        <h3 class="text-xl font-bold text-navy mb-2">Maglumi X8</h3>
+                        <p class="text-slate-500 text-sm flex-grow mb-6">Ultra-high-speed analyzer designed for the most demanding high-volume laboratories.</p>
+                        <a href="contact.html" class="block w-full bg-slate-100 hover:bg-brandBlue hover:text-white text-navy font-semibold py-2 rounded transition">Request Quote</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-slate-300 py-12 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">&copy; 2026 Shree Chemihub Traders. All rights reserved.</p>
+            <p class="text-xs text-slate-400 mt-2">Powered by - GuesS'</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="animations.js"></script>
+</body>
+</html>

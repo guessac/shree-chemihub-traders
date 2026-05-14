@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <title>Contact Us | Shree Chemihub Traders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#C12127',
+                        brandRedDark: '#8A1538',
+                        brandBlue: '#0071A4',
+                        navy: '#003d5c', /* Deep version of logo blue */
+                        slate: {
+                            50: '#f4f9fc',
+                            100: '#e2f0f7',
+                            200: '#cbe2ef',
+                            300: '#a7ccdf',
+                            400: '#7bb0c9',
+                            500: '#5c96b2',
+                            600: '#467b96', /* Muted blue for paragraph text */
+                            700: '#3a6279',
+                            800: '#2d4b5e', /* Dark blue for headings */
+                            900: '#263f50',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+    </style>
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-36">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                        <img src="assets/logo.png" alt="Shree Chemihub Traders Logo" class="h-32 w-auto">
+                        <span class="font-bold text-lg sm:text-2xl text-navy tracking-tight">Shree Chemihub <span class="text-brandBlue">Traders</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate-600 font-medium transition hover:text-brandRed">Home</a>
+                    <a href="products.html" class="text-slate-600 font-medium transition hover:text-brandBlue">Products</a>
+                    <a href="about.html" class="text-slate-600 font-medium transition hover:text-brandBlue">About Us</a>
+                    <a href="contact.html" class="bg-brandBlue text-white px-5 py-2.5 rounded-md font-medium shadow-sm ring-2 ring-brandBlue ring-offset-2">Contact Us</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brandBlue focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
+                <a href="index.html" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50">Home</a>
+                <a href="products.html" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50">Products</a>
+                <a href="about.html" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-brandBlue font-semibold bg-blue-50 rounded-md">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-44 pb-16 bg-navy text-white text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Get in Touch</h1>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto">Request a quote for bulk medical supply or consult with our experts for specialized diagnostic requirements.</p>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl font-bold text-navy mb-6">Contact Information</h2>
+                    <p class="text-slate-600 mb-8">Whether you need advanced laboratory instrumentation or specialized diagnostic reagents, our team is ready to fulfill your demands with precision.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-50 p-3 rounded-lg text-brandRed"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <h4 class="font-bold text-navy">Head Office</h4>
+                                <p class="text-slate-600">Birtamode-5, Jhapa, Nepal</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-lg text-brandBlue"><i data-lucide="phone"></i></div>
+                            <div>
+                                <h4 class="font-bold text-navy">Phone</h4>
+                                <p class="text-slate-600">023-590041</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-slate-100 p-3 rounded-lg text-slate-700"><i data-lucide="mail"></i></div>
+                            <div>
+                                <h4 class="font-bold text-navy">Email</h4>
+                                <p class="text-slate-600">chemihubtraders@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lead Form -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <h3 class="text-2xl font-bold text-navy mb-6">Request a Quote</h3>
+                    <form class="space-y-5" onsubmit="event.preventDefault(); alert('Request sent! Our sales team will contact you shortly.'); this.reset();">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Full Name *</label>
+                            <input type="text" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-brandBlue focus:border-brandBlue outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Company Name *</label>
+                            <input type="text" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-brandBlue focus:border-brandBlue outline-none transition">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Medical/Diagnostic Requirement *</label>
+                                <input type="text" placeholder="e.g. CLIA SNIBE" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-brandBlue focus:border-brandBlue outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Quantity *</label>
+                                <input type="text" placeholder="e.g. 1 pcs" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-brandBlue focus:border-brandBlue outline-none transition">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Additional Details</label>
+                            <textarea rows="4" class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-2 focus:ring-brandBlue focus:border-brandBlue outline-none transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brandRed text-white font-bold py-3 rounded-md hover:bg-brandRed/90 transition shadow-sm">Submit Request</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Map Section -->
+            <div class="mt-16">
+                <h2 class="text-2xl font-bold text-navy mb-6">Find Us on the Map</h2>
+                <div class="rounded-2xl overflow-hidden shadow-sm border border-slate-100 w-full h-[400px] md:h-[500px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.0977266289983!2d87.99631857503991!3d26.645353276807498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e5bb6f3f6ddd25%3A0x8e5f1b3de32a6d94!2sShree%20Chemihub%20Traders!5e0!3m2!1sen!2snp!4v1778430045254!5m2!1sen!2snp" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-slate-300 py-12 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">&copy; 2026 Shree Chemihub Traders. All rights reserved.</p>
+            <p class="text-xs text-slate-400 mt-2">Powered by - GuesS'</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="animations.js"></script>
+</body>
+</html>
